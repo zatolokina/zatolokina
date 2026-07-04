@@ -128,7 +128,7 @@ summary.svc-head-summary{cursor:pointer;-webkit-tap-highlight-color:transparent;
 /* Name + Price on same row */
 .svc-name-price{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .svc-card-name{font-family:var(--serif);font-size:20px;color:var(--dark);line-height:1.2}
-.svc-inline-price{font-family:var(--serif);font-size:20px;color:var(--dark);white-space:nowrap}
+.svc-inline-price{font-family:var(--serif);font-size:20px;color:var(--dark);white-space:nowrap;margin-left:auto;text-align:right}
 .svc-card-mode{font-size:12px;color:var(--muted);margin-top:3px;letter-spacing:.02em}
 
 /* more row */
@@ -172,6 +172,9 @@ details[open] .svc-more-icon{transform:rotate(45deg);background:var(--linen)}
 .svc-table td:last-child{font-size:14px;color:var(--dark)}
 .svc-book-row{padding:16px 0 24px;border-top:1px solid var(--linen)}
 .svc-book{display:inline-block;padding:12px 28px;background:var(--dark);color:var(--white);font-size:11px;letter-spacing:.1em;text-transform:uppercase;transition:background .2s}
+.svc-book.en{display:none}
+#r-en:checked ~ * .svc-book.ua{display:none}
+#r-en:checked ~ * .svc-book.en{display:inline-block}
 .svc-book:hover{background:var(--taupe)}
 
 /* GALLERY */
@@ -229,6 +232,12 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
 .review-card.open .review-expand-btn{display:none}
 .review-collapse{display:none;margin-top:10px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--stone);cursor:pointer}
 .review-card.open .review-collapse{display:inline-block}
+.review-card .review-expand-btn.en,.review-card .review-collapse.en{display:none}
+#r-en:checked ~ * .review-card .review-expand-btn.ua,#r-en:checked ~ * .review-card .review-collapse.ua{display:none}
+#r-en:checked ~ * .review-card .review-expand-btn.en{display:inline-block}
+#r-en:checked ~ * .review-card.open .review-expand-btn.en{display:none}
+#r-en:checked ~ * .review-card .review-collapse.en{display:none}
+#r-en:checked ~ * .review-card.open .review-collapse.en{display:inline-block}
 </style>
 </head>
 <body class="ua">
